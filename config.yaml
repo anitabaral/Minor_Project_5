@@ -1,0 +1,2 @@
+csv_loc = './dataset/embeddings.csv'
+images_loc = './dataset/images'
