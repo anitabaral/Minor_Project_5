@@ -3,7 +3,7 @@ import pathlib as Path
 
 import cv2
 
-class LoadImages:
+class LoadImage:
   def __init__(self):
     pass
 

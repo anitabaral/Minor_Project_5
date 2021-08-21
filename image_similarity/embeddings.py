@@ -1,10 +1,9 @@
-
 import cv2
 
-from .load_model import LoadModel
-from .load_images import LoadImages
+from .models import LoadModel
+from .images import LoadImage
 
-class Embeddings:
+class Embedding:
   def __init__(self):
 
     self.model = LoadModel.get_model()
@@ -12,10 +11,10 @@ class Embeddings:
 
   def get_feature_vector(self, image):
 
-  resized_image = cv2.resize(image, (224, 224))
-  feature_vector = self.model.predict(resized_image.reshape(1, 224, 224, 3))
+    resized_image = cv2.resize(image, (224, 224))
+    feature_vector = self.model.predict(resized_image.reshape(1, 224, 224, 3))
  
-  return feature_vector
+    return feature_vector
 
   def get_embeddings(self):
 

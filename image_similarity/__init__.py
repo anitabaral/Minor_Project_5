@@ -1,5 +1,5 @@
 
-from .embeddings import Embeddings
-from .embeddings_csv import EmbeddingsCsv
-from .load_images import LoadImages
-from .load_model import LoadModel
+from .embeddings import Embedding
+from .embeddings_csv import FeaturesCsv
+from .images import LoadImage
+from .models import LoadModel
