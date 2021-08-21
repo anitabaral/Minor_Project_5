@@ -18,10 +18,13 @@ class Embedding:
 
   def get_embeddings(self):
 
-    embeddings = []
+    embeddings = {}
     total_images = self.images
-    for index, image in enumerate(total_images):
-      feature = self.get_feature_vector(image)
-      embeddings.append(feature)
+    for flower_name, flower_images in total_images.items():
+      feature_list = []
+      for flower in flower_images:
+        feature = self.get_feature_vector(flower_name, flower, model)
+        feature_list.append(feature)
+      embeddings[flower_name] = feature_list
 
     return embeddings

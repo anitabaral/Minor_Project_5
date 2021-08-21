@@ -8,3 +8,4 @@ with open("config.yaml", 'r') as stream:
 def main():
    LoadImage(file_paths['images_loc'])
    FeaturesCsv(file_paths['csv_loc'])
+   LoadModel(file_paths['model_loc'])
