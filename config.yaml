@@ -1,0 +1,3 @@
+csv_loc = './dataset/embeddings.csv'
+images_loc = './dataset/images'
+model_loc = './model/flowers_model.h5'

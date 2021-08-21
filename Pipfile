@@ -8,6 +8,8 @@ requests = "*"
 numpy = "*"
 keras = "*"
 mlflow = "*"
+opencv-python = "==4.5.3.56"
+tensorflow = "*"
 
 [dev-packages]
 
