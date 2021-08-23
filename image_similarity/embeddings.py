@@ -15,13 +15,31 @@ class Embedding:
 
     @staticmethod
     def get_flattern_list(feature_vector_list):
+        """Flattens the feature vector nested list.
+
+        Args:
+            feature_vector_list (object): Nested list of image embeddings.
+
+        Returns:
+            object: Flattened feature_vector_list.
+        """
         flat_feature_vector_list = []
         for sublist in feature_vector_list:
             for item in sublist:
                 flat_feature_vector_list.append(item)
+
         return flat_feature_vector_list
 
     def get_feature_vector(self, image):
+        """Getting the feature vectors and label of images.
+
+        Args:
+            image (ndarray): numpy array of pixel value of images.
+
+        Returns:
+            feature_vector (ndarrray): Predicted feature vector of the given image
+            feature_label (str): Predicted label of the image.
+        """
         image = load_img(image, target_size=(224, 224))
         image_array = img_to_array(image)
         image_array = image_array.reshape(1, 224, 224, 3)
@@ -32,6 +50,11 @@ class Embedding:
         return feature_vector, feature_label
 
     def get_embeddings(self):
+        """Aggregates the embedding of all the images.
+
+        Returns:
+            object: Dataframe consisting of all images feature vector and labels.
+        """
 
         total_images = self.images_name_list
         feature_list = []
@@ -45,4 +68,5 @@ class Embedding:
             feature_list.append(feature_vector_list)
         columns_name = np.arange(0, 513)
         df_embeddings = pd.DataFrame(feature_list, columns=columns_name)
+        
         return df_embeddings
