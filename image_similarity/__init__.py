@@ -1,3 +1,4 @@
 from image_similarity.embeddings import Embedding
 from image_similarity.images import get_input_images
 from image_similarity.models import get_vgg16_flower_model, get_vgg16_model
+from image_similarity.similarity import cosine_similarity
