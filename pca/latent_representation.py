@@ -26,8 +26,7 @@ class PrincipleComponent:
         return principal_components_df
 
     def visualize_pca(self):
-        """Visualing the pricinple components of images on 2D scatter plot.
-        """
+        """Visualing the pricinple components of images on 2D scatter plot."""
         plt.figure(figsize=(10, 8))
         plt.xticks(fontsize=10)
         plt.yticks(fontsize=10)
@@ -51,4 +50,6 @@ class PrincipleComponent:
 
         plt.legend(targets, prop={"size": 15})
         plt.savefig("latent_representation.png")
-        print("Saved as latent_representation.png in the root directory")
+        print(
+            "Principle components saved as latent_representation.png in the root directory"
+        )

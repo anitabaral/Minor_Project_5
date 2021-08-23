@@ -18,6 +18,8 @@ pyyaml = "*"
 pillow = "*"
 sklearn = "*"
 matplotlib = "*"
+numpy = "*"
+scipy = "*"
 
 [dev-packages]
 

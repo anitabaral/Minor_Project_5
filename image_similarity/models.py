@@ -21,7 +21,7 @@ def get_vgg16_model():
         pooling="max",
     )
     model = Model(inputs=base_model.input, outputs=base_model.get_layer("fc2").output)
-    
+
     return model, base_model
 
 
@@ -35,5 +35,5 @@ def get_vgg16_flower_model():
     vgg16_flower_model_path = file_paths["vgg16_flower_model_path"]
     base_model = load_model(vgg16_flower_model_path)
     model = Model(inputs=base_model.input, outputs=base_model.get_layer("dense").output)
-    
+
     return model, base_model
