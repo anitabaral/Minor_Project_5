@@ -60,7 +60,7 @@ class Embedding:
         feature_list = []
         for image in total_images:
             feature_vector, feature_label = self.get_feature_vector(
-                self.input_images_folder_path / image
+                self.input_images_folder_path + "/" + image
             )
             feature_vector_list = feature_vector.tolist()
             feature_vector_list = self.get_flattern_list(feature_vector_list)
@@ -68,5 +68,5 @@ class Embedding:
             feature_list.append(feature_vector_list)
         columns_name = np.arange(0, 513)
         df_embeddings = pd.DataFrame(feature_list, columns=columns_name)
-        
+
         return df_embeddings

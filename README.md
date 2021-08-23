@@ -14,10 +14,9 @@ The Objective of this project is to calculate the image similarity with embeddin
 
 
 ### How to run this repository:
-Pre-requisits: Install pipenv(sudo apt-get pipenv) and clone the repository(git clone ).
-#### Step 1: Setup pipenv
-- Go to the project folder.
-- Open terminal
+Pre-requisits: Install pipenv(sudo apt-get pipenv)
+#### Step 1: Setup
+- Clone the repo
 - pipenv shell
 
 #### Step 2: Setup folders
@@ -26,11 +25,12 @@ Pre-requisits: Install pipenv(sudo apt-get pipenv) and clone the repository(git 
 - Add images of flowers. For ease here is a link: https://drive.google.com/drive/folders/1GnqUyEzItXDO3bXxV2lBYZfO-YJKdU6J?usp=sharing
 
 - create a model folder
-- You can download the model from this link if you don't want to run create_model.ipnyb
+- You can download the model from this link if you don't want to run create_model.ipnyb : https://drive.google.com/drive/folders/1-2Jcaeiu7yqPxkEIwDHVBXgCO1DQ9hYq?usp=sharing
 
 #### Step 3: Run
-- run the code by typing "python app.py" in the terminal
+- run the code "python app.py"
 
 #### Output:
 - In the output, you will see a dataframe consisting of labels of flowers and it's corresponding embeddings.
+- The similarity and dissimilarity score.
 - The latent representation after PCA is saved in the main folder as "latent_representation.png".
