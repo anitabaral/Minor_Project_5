@@ -10,6 +10,11 @@ class PrincipleComponent:
         self.csv_copy = csv_copy
 
     def two_principle_component(self):
+        """Using PCA to reduce the dimensionality for latent representation.
+
+        Returns:
+            object: Dataframe consisting two principle components as columns.
+        """
         scalar = StandardScaler().fit_transform(self.csv)
         pca_ = PCA(n_components=2)
         principal_components = pca_.fit_transform(scalar)
@@ -17,9 +22,12 @@ class PrincipleComponent:
             data=principal_components,
             columns=["Principal component 1", "Principal component 2"],
         )
+
         return principal_components_df
 
     def visualize_pca(self):
+        """Visualing the pricinple components of images on 2D scatter plot.
+        """
         plt.figure(figsize=(10, 8))
         plt.xticks(fontsize=10)
         plt.yticks(fontsize=10)
