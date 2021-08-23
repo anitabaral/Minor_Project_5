@@ -1,0 +1,6 @@
+csv_loc: ./dataset/embeddings.csv
+images_loc: ./dataset/images
+model_loc: ./model/flowers_model.h5
+input_images_folder_path: ./dataset/flowers_similarity
+vgg16_flower_model_path: ./model/vgg16_flower.h5
+class_labels: {"daisy": 0, "dandelion": 1, "rose": 2, "sunflower": 3, "tulip": 4}

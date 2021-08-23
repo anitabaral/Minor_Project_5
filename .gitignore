@@ -1,0 +1,6 @@
+dataset/
+.vscode/
+Pipfile.lock
+.idea/
+.idea/Minor_Project_5.iml
+model/
